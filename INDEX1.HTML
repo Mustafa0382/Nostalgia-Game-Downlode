@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Game Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2 onclick="filterGames('all')">ALL</h2>
+      <h2 onclick="filterGames('ag')">Games</h2>
+
+      <div class="dropdown">
+        <h2 onclick="toggleDropdown('categoryList')">CATEGORIES ▸</h2>
+        <ul id="categoryList" class="hidden">
+          <li onclick="filterGames('fps')">FPS</li>
+          <li onclick="filterGames('tps')">TPS</li>
+          <li onclick="filterGames('rpg')">RPG</li>
+          <li onclick="filterGames('puzzle')">Puzzle</li>
+          <li onclick="filterGames('strategic')">Strategic</li>
+          <li onclick="filterGames('openworld')">Open World</li>
+          <li onclick="filterGames('ds')">D.Sim</li>
+          <li onclick="filterGames('fig')">Fighting</li>
+          <li onclick="filterGames('shout')">Shooting</li>
+          <li onclick="filterGames('tacticalshooter')">Tactical Shooter</li>
+          <li onclick="filterGames('sb')">Sandbox</li>
+          <li onclick="filterGames('adventure')">Adventure</li>
+          <li onclick="filterGames('action')">Action</li>
+          <li onclick="filterGames('fav')">Favourite</li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <h2 onclick="toggleDropdown('platformList')">PLATFORM ▸</h2>
+        <ul id="platformList" class="hidden">
+          <li onclick="filterGames('windows')">Windows</li>
+          <li onclick="filterGames('wii')">Wii U</li>
+          <li onclick="filterGames('ps2')">PS2</li>
+          <li onclick="filterGames('ps3')">PS3</li>
+          <li onclick="filterGames('psp')">PSP</li>
+          <li onclick="filterGames('ps4')">PS4</li>
+        </ul>
+      </div>
+    
+      <div class="dropdown">
+        <h2 onclick="toggleDropdown('emulaterList')">Emulater(PC) ▸</h2>
+        <ul id="emulaterList" class="hidden">
+          <li onclick="filterGames('pspe')">PSP</li>
+          <li onclick="filterGames('pse1')">PS1</li>
+          <li onclick="filterGames('pse2')">PS2</li>
+          <li onclick="filterGames('pse3')">PS3</li>
+          <li onclick="filterGames('pse4')">PS4</li>
+          <li onclick="filterGames('pse5')">PS5</li>
+          <li onclick="filterGames('dolphin')">Wii</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="game-grid" id="gameGrid">
+      <div class="game-card ag action rpg windows">
+        <img src="Skyrim.png" alt="The Elder Scrolls V: Skyrim" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim" target="_blank" rel="noopener noreferrer">The Elder Scrolls V: Skyrim</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://pcgamestorrents.com/?s=skyrim" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card  ag rpg strategic action ps4 windows">
+        <img src="Mount_&_Blade_-_Warband_cover.jpg" alt="Mount & Blade:Warband" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Mount_%26_Blade:_Warband" target="_blank" rel="noopener noreferrer">Mount & Blade:Warband</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://download.taleworlds.com/mb_warband_setup_1174.exe" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld action adventure ps2 windows">
+        <img src="TUH.jpg" alt="The Incredible Hulk:Ultimate Destruction" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/The_Incredible_Hulk:_Ultimate_Destruction" target="_blank" rel="noopener noreferrer">The Incredible Hulk:Ultimate Destruction</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://drive.usercontent.google.com/download?id=0BxEgcz2XJCaeQVFDNGxEenZiTFk&export=download&authuser=0" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag strategic ps3 ps4 windows">
+        <img src="OIP.jfif" alt="Plants vs Zombies" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Plants_vs._Zombies" target="_blank" rel="noopener noreferrer">Plants vs Zombies</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://plants-v-zombies.en.softonic.com/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld action fps rpg adventure ps3 ps4 windows">
+        <img src="Far_Cry_3_PAL_box_art.jpg" alt="Far Cry 3" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Far_Cry_3" target="_blank" rel="noopener noreferrer">Far Cry 3</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/far-cry-3-duology/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld action adventure psp">
+        <img src="Grand_Theft_Auto_Liberty_City_Stories_box.jpg" alt="Grand Theft Auto:Liberty City Stories" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Liberty_City_Stories" target="_blank" rel="noopener noreferrer">Grand Theft Auto:Liberty City Stories</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://www.consoleroms.com/roms/psp/grand-theft-auto-liberty-city-stories" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld action adventure psp">
+        <img src="GTA_Vice_City_Stories_PSP_boxart.jpg" alt="Grand Theft Auto:Vice City Stories" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City_Stories" target="_blank" rel="noopener noreferrer">Grand Theft Auto:Vice City stories</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://www.consoleroms.com/roms/psp/grand-theft-auto-vice-city-stories" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld action adventure ps2 windows">
+        <img src="Vice-city-cover.jpg" alt="Grand Theft Auto:Vice City" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_Vice_City" target="_blank" rel="noopener noreferrer">Grand Theft Auto:Vice City</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/grand-theft-auto-vice-city-the-definitive-edition/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+	
+      <div class="game-card ag strategic fav windows">
+        <img src="Medieval_II_Total_War_pc.jpg" alt="Medieval II: Total War" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Medieval_II:_Total_War">Medieval II: Total War</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/medieval-2-total-war/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag strategic fav windows">
+        <img src="Total_WarAttila_boxart.png" alt="Total War: Attila" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Total_War:_Attila" rel="noopener noreferrer">Total War: Attila</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://1337x.to/torrent/5718855/Total-War-Attila-v1-6-0-13356-2972767-8-DLCs-MULTi9-FitGirl-Repack-Selective-Download-from-8-3-GB/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card  ag openworld action adventure psp ps2 ps3 windows">
+        <img src="GTASABOX.jpg" alt="Grand Theft Auto: San Andreas" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas" rel="noopener noreferrer">Grand Theft Auto: San Andreas</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://drive.usercontent.google.com/download?id=0B_7Lz23cX2zdU3pzRmlyd3BDNVE&export=download&authuser=0" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld action adventure ps2 windows">
+        <img src="GTA3boxcover.jpg" alt="Grand Theft Auto III" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_III" rel="noopener noreferrer">Grand Theft Auto III</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://drive.usercontent.google.com/download?id=0B-nzbMTcJjX0TEdDeFNVYkp0bms&export=download&authuser=0">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="game-card ag tactical shooter windows">
+        <img src="SWAT_4_Coverart.png" alt="SWAT 4" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/SWAT_4" rel="noopener noreferrer">SWAT 4</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/swat-4-gold-edition/">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld action adventure ps3 windows">
+        <img src="Grand_Theft_Auto_IV_cover.jpg" alt="Grand Theft Auto IV" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV" rel="noopener noreferrer">Grand Theft Auto IV</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/grand-theft-auto-iv-complete-edition/">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card shout ag windows">
+        <img src="House_Of_The_Dead_2,_Thelogo.png" alt="The House of the Dead 2" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/The_House_of_the_Dead_2" target="_blank" rel="noopener noreferrer">The House of the Dead 2</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://oldgamesdownload.com/the-house-of-the-dead-2/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card shout ag windows">
+        <img src="House_of_the_Dead_arcade_flyer.jpg" alt="The House of the Dead" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/The_House_of_the_Dead_(video_game)" target="_blank" rel="noopener noreferrer">The House of the Dead</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://oldgamesdownload.com/the-house-of-the-dead/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card rpg tps ag action ps3 wii windows">
+        <img src="MassEffect3_cover.jpg" alt="Mass Effect 3" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Mass_Effect_3" target="_blank" rel="noopener noreferrer">Mass Effect 3</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/?s=mass+effect+3" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ds sb ag ps3 wii  windows">
+        <img src="Sims3cover.jpg" alt="The Sims 3" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/The_Sims_3" rel="noopener noreferrer">The Sims 3</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torrent4you.org/en/sims-3/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag openworld tps windows ps2 ">
+        <img src="Total_Overdose_Coverart.png" alt="Total Overdose" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Total_Overdose" target="_blank" rel="noopener noreferrer">Total Overdose</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://drive.usercontent.google.com/download?id=0B6zNfIXTp0r6clgxYm1Nc1U3dm8&export=download&authuser=0" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="game-card fps ag tacticalshooter windows">
+        <img src="Global_Operations_cover.png" alt="Global Operations" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Global_Operations" target="_blank" rel="noopener noreferrer">Global Operations</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://oldgamesdownload.com/global-operations/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card action ag adventure windows ps2 ps4">
+        <img src="Fahrenheit_pc_boxart.jpg" alt="Fahrenheit" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Fahrenheit_(2005_video_game)" target="_blank" rel="noopener noreferrer">Fahrenheit</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/fahrenheit-indigo-prophecy-remastered/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card rpg tps ag action ps3 windows">
+        <img src="MassEffect2_cover.png" alt="Mass Effect 2" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Mass_Effect_2" target="_blank" rel="noopener noreferrer">Mass Effect 2</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/?s=mass+effect+2" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card action ag adventure ps2 psp windows ">
+        <img src="Gun_Coverart.jpg" alt="Gun" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Gun_(video_game)" target="_blank" rel="noopener noreferrer">Gun</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/gun/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fig ps3 psp">
+        <img src="Tekken_6_Box_Art.jpg" alt="Tekken 6" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Tekken_6" target="_blank" rel="noopener noreferrer">Tekken 6</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://www.consoleroms.com/roms/psp/tekken-6" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag action adventure rpg windows">
+        <img src="Witcher_2_cover.jpg" alt="The Witcher 2:Assassins of Kings" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/The_Witcher_2:_Assassins_of_Kings" target="_blank" rel="noopener noreferrer">The Witcher 2:Assassins of Kings</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/the-witcher-2-assassins-of-kings-enhanced-edition/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag tps windows ps2">
+        <img src="Freedom_Fighters_(video_game_cover_art).jpg" alt="Freedom Fighters" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Freedom_Fighters_(video_game)" target="_blank" rel="noopener noreferrer">Freedom Fighters</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://oldgamesdownload.com/freedom-fighters/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag action adventure fig windows ">
+        <img src="Ryse_box_art.jpg" alt="Ryse: Son of Rome" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Ryse:_Son_of_Rome">Ryse: Son of Rome</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/ryse-son-of-rome-legendary-edition/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fig ps2 ">
+        <img src="Tekken5Cover.jpg" alt="Tekken 5" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Tekken_5" target="_blank" rel="noopener noreferrer">Tekken 5</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://romsdl.com/roms/playstation-2/tekken-5-83619" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fig ps2 ">
+        <img src="Tekken_4_Coverart.png" alt="Tekken 4" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Tekken_4" target="_blank" rel="noopener noreferrer">Tekken 4</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://www.consoleroms.com/roms/ps2/tekken-4" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fps ps3 windows">
+        <img src="Half-Life_2_-_Episode_Two.jpg" alt="Half-Life 2: Episode Two" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two" target="_blank" rel="noopener noreferrer">Half-Life 2: Episode Two</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/half-life-2-complete/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fps ps2 windows">
+        <img src="Return_to_Castle_Wolfenstein_Coverart.jpg" alt="Return to Castle Wolfenstein" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Return_to_Castle_Wolfenstein" target="_blank" rel="noopener noreferrer">Return to Castle Wolfenstein</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://mega.nz/file/vXgklAgT#iTVFvurf3ylOzKGijJr3SSZRbjOjM2klilKpOpMfF20" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fps ps3 windows">
+        <img src="Half-Life_2_-_Episode_One.jpg" alt="Half-Life 2: Episode One" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two" target="_blank" rel="noopener noreferrer">Half-Life 2: Episode One</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/half-life-2-complete/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fps windows">
+        <img src="efaba51b34f225b5bc9c7862280e8a75.jpg" alt="Half-Life 2" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Half-Life_2" target="_blank" rel="noopener noreferrer">Half-Life 2</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/half-life-2-20th-anniversary-edition/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag actionps3 wii">
+        <img src="omni.png" alt="Ben 10:Omniverse" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Ben_10:_Omniverse" target="_blank" rel="noopener noreferrer">Ben 10:Omniverse</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://romsfun.com/roms/playstation-2/ben-10-omniverse.html" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ben 10 Omniverse 2 -->
+      <div class="game-card ag action ps3 wii">
+        <img src="omni2.png" alt="Ben 10:Omniverse 2" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Ben_10:_Omniverse_2" target="_blank" rel="noopener noreferrer">Ben 10:Omniverse 2</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://romsfun.com/roms/playstation-3/ben-10-omniverse-2.html" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emulators Section -->
+
+      <!-- PS1 Emulator -->
+      <div class="game-card emulator pse1">
+        <img src="ps1emu.png" alt="PCSxR" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://ps1emulator.com/" target="_blank" rel="noopener noreferrer">PCSxR</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://ps1emulator.com/tutorial" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PS2 Emulator -->
+      <div class="game-card emulator pse2">
+        <img src="ps2emu.png" alt="PCSX2" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/PCSX2" target="_blank" rel="noopener noreferrer">PCSX2</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://pcsx2.net/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PS3 Emulator -->
+      <div class="game-card emulator pse3">
+        <img src="ps3emu.png" alt="RPCS3" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/RPCS3" target="_blank" rel="noopener noreferrer">RPCS3</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://rpcs3.net/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PS4 Emulator -->
+      <div class="game-card emulator pse4">
+        <img src="ps4emu.png" alt="RPCS4" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://emulation.fandom.com/wiki/PlayStation_4_emulators" target="_blank" rel="noopener noreferrer">RPCS4</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://rpcs4.com/download" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card emulator pse4">
+        <img src="ps4e.png" alt="PCSx4" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://pcsx4.org/" target="_blank" rel="noopener noreferrer">PCSx4</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://pcsx4.org/">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PS5 Emulator -->
+      <div class="game-card emulator pse5">
+        <img src="ps5emu.png" alt="RPCS5" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://rpcs5.com/" target="_blank" rel="noopener noreferrer">RPCS5</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://rpcs5.com/">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card emulator pse5">
+        <img src="ps5e.png" alt="PCSx5" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://pcsx5.org/" target="_blank" rel="noopener noreferrer">PCSx5</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://pcsx5.org/">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PSP Emulator -->
+      <div class="game-card emulator pspe">
+        <img src="pspe.png" alt="PPSSPP" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/PPSSPP" target="_blank" rel="noopener noreferrer">PPSSPP</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://www.ppsspp.org/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dolphin Emulator -->
+      <div class="game-card emulator dolphin">
+        <img src="dolphin.png" alt="Dolphin Emulator" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Dolphin_(emulator)" target="_blank" rel="noopener noreferrer">Dolphin Emulator</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://dolphin-emu.org/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fps windows">
+        <img src="Half-Life_Cover_Art.jpg" alt="Half-Life" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Half-Life_(video_game)" target="_blank" rel="noopener noreferrer">Half-Life</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://drive.usercontent.google.com/download?id=0B5iLgrUW-o20eV9LVjgyREY1c3M&export=download&authuser=0&resourcekey=0-L2iReeaLv_j3TJupEa28FQ" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fig ps">
+        <img src="Tekken_3_flyer.jpg" alt="Tekken 3" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Tekken_3" target="_blank" rel="noopener noreferrer">Tekken 3</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://highlycompressedpcgames.im/tekken-3-download-for-pc-highly-compressed/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card openworld ag action adventure ps3 ps4 windows">
+        <img src="Grand_Theft_Auto_V.png" alt="Grand Theft Auto: V" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto_V" target="_blank" rel="noopener noreferrer">Grand Theft Auto: V</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/grand-theft-auto-v/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fps windows">
+        <img src="Black_Mesa_release_cover.jpg" alt="Black Mesa" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="Black_Mesa_release_cover.jpg" target="_blank" rel="noopener noreferrer">Black Mesa</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/black-mesa/#:~:text=Genres/Tags:%20Action," target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag action adventure psp ps2 wii">
+        <img src="Ben10VA_Xbox_Cover.jpg" alt="Ben 10: Alien Force–Vilgax Attacks" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Ben_10:_Alien_Force_%E2%80%93_Vilgax_Attacks" target="_blank" rel="noopener noreferrer">Ben 10: Alien Force–Vilgax Attacks</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://coolrom.com.au/roms/psp/47320/Ben_10_-_Alien_Force_Vilgax_Attacks.php" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag action adventure psp ps2 wii">
+        <img src="ben10af.jfif" alt="Ben 10: Alien Force" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Ben_10:_Alien_Force_(video_game)" target="_blank" rel="noopener noreferrer">Ben 10: Alien Force</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://www.consoleroms.com/roms/psp/ben-10-alien-force" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag  action rpg fps windows ps3 wii">
+        <img src="dues ex hr.jfif" alt="Deus Ex: Human Revolution" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Deus_Ex:_Human_Revolution" target="_blank" rel="noopener noreferrer">Deus Ex: Human Revolution</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/deus-ex-human-revolution-twin-pack/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag psp wii ps2">
+        <img src="ben10poe.jpg" alt="Ben 10: Protector of Earth" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Ben_10:_Protector_of_Earth" target="_blank" rel="noopener noreferrer">Ben 10: Protector of Earth</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://games.softpedia.com/get/Freeware-Games/Ben-10-Protector-of-Earth.shtml" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag fps ps3 ps4 windows">
+        <img src="Battlefield_4_cover_art.jpg" alt="Battlefield 4" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Battlefield_4" target="_blank" rel="noopener noreferrer">Battlefield 4</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/battlefield-4/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag action adventure ps3 ps4 windows">
+        <img src="Saints_Row_The_Third_box_art.jpg" alt="Saints Row: The Third" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Saints_Row:_The_Third" target="_blank" rel="noopener noreferrer">Saints Row: The Third</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://fitgirl-repacks.site/saints-row-the-third-remastered/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag tacticalshooter windows">
+        <img src="Igi2box.jpg" alt="I.G.I.-2: Covert Strike" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/I.G.I.2:_Covert_Strike" target="_blank" rel="noopener noreferrer">I.G.I.2: Covert Strike</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://torgamez.com/i-g-i-2-covert-strike/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag action adventure ps2 ps3 wii psp">
+        <img src="ben10cs.png" alt="Ben 10: UA Cosmic Destruction" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Ben_10:_Ultimate_Alien_%E2%80%93_Cosmic_Destruction" target="_blank" rel="noopener noreferrer">Ben 10: UA Cosmic Destruction</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://www.consoleroms.com/roms/psp/ben-10-ultimate-alien-cosmic-destruction" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card ag tacticalshooter windows">
+        <img src="igi.jfif" alt="I.G.I.1: I’m Going In" />
+        <div class="overlay">
+          <div class="top-part">
+            <a href="https://en.wikipedia.org/wiki/Project_I.G.I." target="_blank" rel="noopener noreferrer">I.G.I.1: I’m Going In</a>
+          </div>
+          <div class="bottom-part">
+            <a href="https://oldgamesdownload.com/project-igi-im-going-in/" target="_blank" rel="noopener noreferrer">⬇ Download</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end game-grid -->
+  </div> <!-- end container -->
+
+  <script>
+    function toggleDropdown(id) {
+      const list = document.getElementById(id);
+      list.classList.toggle('hidden');
+    }
+
+    function filterGames(category) {
+      const allGames = document.querySelectorAll('.game-card');
+      allGames.forEach(game => {
+        if (category === 'all') {
+          game.style.display = 'block';
+        } else {
+          game.style.display = game.classList.contains(category) ? 'block' : 'none';
+        }
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('gameGrid');
+      const cards = Array.from(grid.children);
+      cards.sort((a, b) => {
+        const nameA = a.querySelector('.overlay .top-part a').textContent.toLowerCase();
+        const nameB = b.querySelector('.overlay .top-part a').textContent.toLowerCase();
+        return nameA.localeCompare(nameB);
+      });
+      cards.forEach(card => grid.appendChild(card));
+    });
+  </script>
+</body>
+</html>
